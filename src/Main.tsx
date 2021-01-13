@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme:any) => ({
         left: 56,
     },
     tempData: {
-        marginTop: 65,
+        marginTop: 50,
     },
     Automatic: {
         marginTop: 20,
