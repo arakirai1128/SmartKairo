@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: any) => ({
     root: {
         position: 'relative',
         bottom: 120,
-        left: 206,
+        left: 207,
         fontSize: 27,
 
     }
