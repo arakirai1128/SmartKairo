@@ -1,0 +1,61 @@
+{
+  "name": "smart-kairo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@grapecity/wijmo.react.gauge": "5.20203.748",
+    "@grapecity/wijmo.react.input": "5.20203.748",
+    "@material-ui/core": "4.11.2",
+    "@material-ui/icons": "4.11.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-responsive": "8.0.2",
+    "bootstrap": "4.5.3",
+    "gh-pages": "3.1.0",
+    "igniteui-react-core": "16.13.0",
+    "igniteui-react-gauges": "16.13.0",
+    "invariant": "2.2.4",
+    "npm": "6.14.11",
+    "react": "^17.0.1",
+    "react-bluetooth": "0.0.0",
+    "react-dom": "^17.0.1",
+    "react-responsive": "8.2.0",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4",
+    "yarn": "1.22.10"
+  },
+  "homepage": "https://arakirai1128.github.io/SmartKairo/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}
