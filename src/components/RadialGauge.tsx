@@ -8,9 +8,9 @@ IgrRadialGaugeModule.register();
 const useStyles = makeStyles((theme: any) => ({
     root: {
         position: 'relative',
-        bottom: 110,
-        left: 208,
-        fontSize: 22,
+        bottom: 120,
+        left: 210,
+        fontSize: 27,
 
     }
 }));
