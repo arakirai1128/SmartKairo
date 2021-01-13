@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme:any) => ({
     gauge: {
         position: 'relative',
         top: 75,
-        right: 33
+        right: 38
     },
     gauges: {
         position: 'relative',

@@ -37,9 +37,7 @@ const Connect = async (device_gatt:any) => {
         if (device_gatt) {
 
             //ble接続
-            console.log('fuge');
             const server = await device_gatt.connect();
-            console.log('fuge');
             //サービス検出
             const service = await server.getPrimaryService(Ble_uuid.SERVICE_UUID);
             // ペリフェラルから受信用
