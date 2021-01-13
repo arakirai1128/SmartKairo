@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/SmartKairo/static/css/main.ea27909b.chunk.css",
-    "main.js": "/SmartKairo/static/js/main.f5795df7.chunk.js",
-    "main.js.map": "/SmartKairo/static/js/main.f5795df7.chunk.js.map",
+    "main.js": "/SmartKairo/static/js/main.c1d15681.chunk.js",
+    "main.js.map": "/SmartKairo/static/js/main.c1d15681.chunk.js.map",
     "runtime-main.js": "/SmartKairo/static/js/runtime-main.ca509587.js",
     "runtime-main.js.map": "/SmartKairo/static/js/runtime-main.ca509587.js.map",
-    "static/js/2.171b962a.chunk.js": "/SmartKairo/static/js/2.171b962a.chunk.js",
-    "static/js/2.171b962a.chunk.js.map": "/SmartKairo/static/js/2.171b962a.chunk.js.map",
+    "static/js/2.ffbf4848.chunk.js": "/SmartKairo/static/js/2.ffbf4848.chunk.js",
+    "static/js/2.ffbf4848.chunk.js.map": "/SmartKairo/static/js/2.ffbf4848.chunk.js.map",
     "static/js/3.c89a66f3.chunk.js": "/SmartKairo/static/js/3.c89a66f3.chunk.js",
     "static/js/3.c89a66f3.chunk.js.map": "/SmartKairo/static/js/3.c89a66f3.chunk.js.map",
     "index.html": "/SmartKairo/index.html",
     "static/css/main.ea27909b.chunk.css.map": "/SmartKairo/static/css/main.ea27909b.chunk.css.map",
-    "static/js/2.171b962a.chunk.js.LICENSE.txt": "/SmartKairo/static/js/2.171b962a.chunk.js.LICENSE.txt"
+    "static/js/2.ffbf4848.chunk.js.LICENSE.txt": "/SmartKairo/static/js/2.ffbf4848.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ca509587.js",
-    "static/js/2.171b962a.chunk.js",
+    "static/js/2.ffbf4848.chunk.js",
     "static/css/main.ea27909b.chunk.css",
-    "static/js/main.f5795df7.chunk.js"
+    "static/js/main.c1d15681.chunk.js"
   ]
 }
