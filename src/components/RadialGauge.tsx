@@ -24,7 +24,7 @@ const RadialGauge = (props: any) => {
 
     const [value, setValue] = React.useState<string|number>(0);
     const [Invalidation, setInvalidation] = React.useState<boolean>(false);
-    const [automaticOperation, setAutomaticOperation] = React.useState<string>('on');
+    const [automaticOperation, setAutomaticOperation] = React.useState<string>('-1');
 
     const send = async (newValue: any) => {
 
@@ -38,16 +38,16 @@ const RadialGauge = (props: any) => {
 
                 const datas:string = String(data);
 
-                let kvs:string|null = sessionStorage.getItem('kvs');
+                let auto:string|null = sessionStorage.getItem('auto');
 
-                if (kvs === 'on') {
+                if (auto === '-1') {
                     setValue(data);
-                    setAutomaticOperation(kvs);
+                    setAutomaticOperation(auto);
 
                     // alert('自動操作設定になっているので温度設定できません');
                     return;
-                } else if (kvs === 'off') {
-                    setAutomaticOperation(kvs);
+                } else if (auto === '0') {
+                    setAutomaticOperation(auto);
                     setValue(datas);
                     var arrayBuffe:Uint8Array = new TextEncoder().encode(datas);
 
@@ -66,7 +66,7 @@ const RadialGauge = (props: any) => {
             setInvalidation(false);
             setValue(0);
         }
-        if (automaticOperation === 'on' && value >= 0) {
+        if (automaticOperation === '-1' && value >= 0) {
             setValue(0);
         }
 

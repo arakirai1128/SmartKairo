@@ -39,32 +39,47 @@ const SetCard = (props: SetInformation) => {
 
     const classes = useStyles();
 
-    const characteristic_TX:any = props.characteristic_TX;
-    const Server:boolean = props.server;
+    const characteristic_TX: any = props.characteristic_TX;
+    const Server: boolean = props.server;
 
-    const [selectedValue, setSelectedValue] = React.useState<any>('on');
+    const [selectedValue, setSelectedValue] = React.useState<string>('-1');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
-        if(characteristic_TX){
-            // console.log(event.target.value);
-            const data:string = event.target.value;
-    
-            const arrayBuffe:Uint8Array = new TextEncoder().encode(data);
-                
-            characteristic_TX.writeValue(arrayBuffe);
-            setSelectedValue(data);
+        if (characteristic_TX) {
 
-            sessionStorage.setItem('kvs', data);
+            try {
+                const data: string = event.target.value;
+
+                if(data === '-1'){
+                    console.log(data);
+                    const arrayBuffe: Uint8Array = new TextEncoder().encode(data);
+                    console.log(arrayBuffe);
+    
+                    characteristic_TX.writeValue(arrayBuffe);
+                    setSelectedValue(data);
+    
+                    sessionStorage.setItem('auto', data);      
+                } else {
+                    const arrayBuffe: Uint8Array = new TextEncoder().encode(data);
+                    console.log(arrayBuffe);
+                    console.log(data);
+                    setSelectedValue(data);
+                    sessionStorage.setItem('auto', data);    
+                }
+
+            } catch (e) {
+                console.error(e);
+            }
 
         }
         return;
     };
     React.useEffect(() => {
-        if(!Server){
-            const SelectValue = 'on';
-            sessionStorage.setItem('kvs', SelectValue);
-            setSelectedValue('on');
+        if (!Server) {
+            const SelectValue = '-1';
+            sessionStorage.setItem('auto', SelectValue);
+            setSelectedValue('-1');
         }
     }, [Server]);
     return (
@@ -78,32 +93,32 @@ const SetCard = (props: SetInformation) => {
                         <div>
                             ON :
                             <Radio
-                                checked={selectedValue === 'on'}
+                                checked={selectedValue === '-1'}
                                 onChange={handleChange}
-                                value="on"
+                                value="-1"
                                 name="radio-button-demo"
-                                inputProps={{ 'aria-label': 'on' }}
+                                inputProps={{ 'aria-label': '-1' }}
                             />
                             OFF :
                             <Radio
-                                checked={selectedValue === 'off'}
+                                checked={selectedValue === '0'}
                                 onChange={handleChange}
-                                value="off"
+                                value="0"
                                 name="radio-button-demo"
-                                inputProps={{ 'aria-label': 'off' }}
+                                inputProps={{ 'aria-label': '0' }}
                             />
                         </div>
                         :
                         <div>
                             ON :
                             <Radio
-                                checked={selectedValue === 'on'}
-                                value="on"
+                                checked={selectedValue === '-1'}
+                                value="-1"
                                 disabled
                             />
                             OFF :
                             <Radio
-                                checked={selectedValue === 'off'}
+                                checked={selectedValue === '0'}
                                 value="off"
                                 disabled
                             />
