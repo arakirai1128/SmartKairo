@@ -52,18 +52,13 @@ const SetCard = (props: SetInformation) => {
                 const data: string = event.target.value;
 
                 if(data === '-1'){
-                    console.log(data);
                     const arrayBuffe: Uint8Array = new TextEncoder().encode(data);
-                    console.log(arrayBuffe);
     
                     characteristic_TX.writeValue(arrayBuffe);
                     setSelectedValue(data);
     
                     sessionStorage.setItem('auto', data);      
                 } else {
-                    const arrayBuffe: Uint8Array = new TextEncoder().encode(data);
-                    console.log(arrayBuffe);
-                    console.log(data);
                     setSelectedValue(data);
                     sessionStorage.setItem('auto', data);    
                 }

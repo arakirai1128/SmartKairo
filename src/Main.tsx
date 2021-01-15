@@ -111,12 +111,12 @@ function SmartPhoneMain() {
 
         } else if (count === 1) {  // bluetooth disconnect
             if (!server || !server.connected) {
+                console.log('接続がされていないのでdisconnectできない');
                 setOpen(false);
                 return;
             }
             try {
                 server.disconnect();
-                console.log(server);
                 setCharacteristic({ ...characteristic, Characteristic_TX: null, Characteristic_RX: null });
                 setColor('default');
                 setCount(0);
