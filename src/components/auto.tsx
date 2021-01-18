@@ -59,8 +59,11 @@ const SetCard = (props: SetInformation) => {
     
                     sessionStorage.setItem('auto', data);      
                 } else {
+                    const pwmValue = '0';
+                    const arrayBuffe: Uint8Array = new TextEncoder().encode(pwmValue);
+                    characteristic_TX.writeValue(arrayBuffe);
                     setSelectedValue(data);
-                    sessionStorage.setItem('auto', data);    
+                    sessionStorage.setItem('auto', data);  
                 }
 
             } catch (e) {
